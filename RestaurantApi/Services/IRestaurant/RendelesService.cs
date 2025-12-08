@@ -51,6 +51,27 @@ namespace RestaurantApi.Services.IRestaurant
                 return resultResponseDto;
             }
         }
+        public async Task<object> GetAllRendelesWithFood()
+        {
+            try
+            {
+
+                var rendelesek = await _context.Rendeles.Include(x=> x.Kapcsolos).ThenInclude(x=> x.Termekek).ToListAsync();
+                var food = rendelesek.Select(x => new { RendelesId = x.Id, Termek = x.Kapcsolos.Select(y => new { TermekNev = y.Termekek.Etel, TermekAr = y.Termekek.Ar }) });
+                
+                resultResponseDto.message = "Sikeres lekérdezés";
+                resultResponseDto.result = rendelesek;
+                return resultResponseDto;
+            }
+
+            catch (Exception ex)
+            {
+
+                resultResponseDto.message = ex.Message;
+                resultResponseDto.result = null;
+                return resultResponseDto;
+            }
+        }
 
     }
 }
