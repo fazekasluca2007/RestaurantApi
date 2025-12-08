@@ -25,5 +25,16 @@ namespace RestaurantApi.Controllers
             return BadRequest(rendeles);
 
         }
+        [HttpGet("withcard")]
+        public async Task<ActionResult> GetAllRendelesWithCard()
+        {
+            var rendeles = await _rendeles.GetAllRendelesWithCard();
+            if (rendeles != null)
+            {
+                return Ok(rendeles);
+            }
+            return BadRequest(rendeles);
+
+        }
     }
 }

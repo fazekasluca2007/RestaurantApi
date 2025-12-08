@@ -8,5 +8,25 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantApi.Controllers.RendelesController",
+    "Method": "GetAllRendelesWithCard",
+    "RelativePath": "api/Rendeles/withcard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantApi.Controllers.TermekController",
+    "Method": "GetTermek",
+    "RelativePath": "api/Termek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
