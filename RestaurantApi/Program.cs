@@ -1,4 +1,10 @@
+using RestaurantApi.Models;
+using RestaurantApi.Services.IRestaurant;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<EtteremContext>();
+builder.Services.AddScoped<IRendeles, RendelesService>();
+builder.Services.AddScoped<ITermek,TermekService>();
 
 // Add services to the container.
 
