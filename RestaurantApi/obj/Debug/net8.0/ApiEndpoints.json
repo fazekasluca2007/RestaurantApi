@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "RestaurantApi.Controllers.KapcsoloController",
+    "Method": "PostRelation",
+    "RelativePath": "api/Kapcsolo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addRelationDto",
+        "Type": "RestaurantApi.Models.Dtos.AddRelationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RestaurantApi.Controllers.RendelesController",
     "Method": "GetAllRendeles",
     "RelativePath": "api/Rendeles",
@@ -11,8 +27,38 @@
   },
   {
     "ContainingType": "RestaurantApi.Controllers.RendelesController",
+    "Method": "GetTermekRendelesLegalabbEgyszer",
+    "RelativePath": "api/Rendeles/termek-rendelesenkent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantApi.Controllers.RendelesController",
+    "Method": "GetRendelesTetelLista",
+    "RelativePath": "api/Rendeles/tetelek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantApi.Controllers.RendelesController",
     "Method": "GetAllRendelesWithCard",
     "RelativePath": "api/Rendeles/withcard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantApi.Controllers.RendelesController",
+    "Method": "GetAllRendelesWithCola",
+    "RelativePath": "api/Rendeles/withcola",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -8,7 +8,7 @@ namespace RestaurantApi.Services.IRestaurant
     public class TermekService : ITermek
     {
         private readonly EtteremContext _context;
-        ResultResponseDto resultResponseDto = new ResultResponseDto();
+        resultResponseDto resultResponseDto = new resultResponseDto();
         public TermekService(EtteremContext context)
         {
             _context = context;

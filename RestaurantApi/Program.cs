@@ -1,11 +1,28 @@
+using Microsoft.EntityFrameworkCore;
 using RestaurantApi.Models;
+using RestaurantApi.Models.Dtos;
+using RestaurantApi.Services;
 using RestaurantApi.Services.IRestaurant;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<EtteremContext>();
+builder.Services.AddDbContext<EtteremContext>(
+    option =>
+    {
+        var ConnectionString = builder.Configuration.GetConnectionString("MySQL");
+        option.UseMySQL(ConnectionString);
+    }
+    
+    
+    );
+
+
+
+
 builder.Services.AddScoped<IRendeles, RendelesService>();
 builder.Services.AddScoped<ITermek,TermekService>();
+builder.Services.AddScoped<resultResponseDto>();
+builder.Services.AddScoped<IKapcsolo, KapcsoloService>();
 
 builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
